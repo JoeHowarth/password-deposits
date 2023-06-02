@@ -41,7 +41,7 @@ contract SavingsAccountTest is Test {
 
         console.log(hub.deposits(address(this)));
 
-        assertTrue(hub.deposits(address(this)) == hubAmt / 2);
+        assertTrue(hub.deposits(address(this)) == (hubAmt / 2) - cost);
     }
 
     receive() external payable {}
